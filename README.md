@@ -1,2 +1,2 @@
-# darkania-base
-The base of darkania.
+# Darkania
+*Arch* (*Arch Linux*)for ***cats***. *Yeah*.
