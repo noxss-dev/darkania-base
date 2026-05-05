@@ -1,2 +1,2 @@
 # Darkania
-*Arch* (*Arch Linux*)for ***cats***. *Yeah*.
+*Arch* (*Arch Linux*) for ***cats***. *Yeah*.
