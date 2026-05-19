@@ -12,8 +12,8 @@ echo Partition, Size, Type
 echo /dev/sda1, 1G, EFI System
 echo /dev/sda2, 16G, Linux Swap
 echo /dev/sda3, REMAINING, Linux Root (x86-64)
-echo REMAINING is your disk's size - 1G - 16G. For example, i have a 500G drive, 500G - 1G - 16G = (500-17)G = 483G. I will put 483G on that Partition.
-echo We do not support dual boot. You can only install Darklandia on disk. CTRL+C to deny, Enter to accept
+echo REMAINING is your disks size - 1G - 16G. For example, i have a 500G drive, 500G - 1G - 16G = (500-17)G = 483G. I will put 483G on that Partition.
+echo We dont support dual boot. You can only install Darklandia on disk. CTRL+C to deny, Enter to accept
 read YAYSJS
 clear
 cfdisk /dev/sda
