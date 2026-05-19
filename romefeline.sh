@@ -26,7 +26,7 @@ mount --mkdir /dev/sda1 /mnt/boot
 swapon /dev/sda2
 pacstrap -K /mnt base linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab 
-arch-chroot /mnt sh -c "ln -sf /usr/share/zoneinfo/Europe/Rome /etc/localtime && hwclock --systohc && locale-gen && echo LANG=it_IT.UTF-8 > /etc/locale.conf && echo KEYMAP=it > /etc/vconsole.conf && echo catstation > /etc/hostname && mkinitcpio -P && pacman -S grub efibootmgr && grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB && grub-mkconfig -o /boot/grub/grub.cfg && passwd && pacman -S wpa_supplicant iwd networkmanager && systemctl enable --now NetworkManager"
+arch-chroot /mnt sh -c "ln -sf /usr/share/zoneinfo/Europe/Rome /etc/localtime && hwclock --systohc && locale-gen && echo LANG=it_IT.UTF-8 > /etc/locale.conf && echo KEYMAP=it > /etc/vconsole.conf && echo catstation > /etc/hostname && mkinitcpio -P && pacman -S grub efibootmgr && grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB && grub-mkconfig -o /boot/grub/grub.cfg && passwd && pacman -S wpa_supplicant iwd networkmanager && systemctl enable --now NetworkManager && pacman -S gdm gnome && systemctl enable gdm.service"
 clear
 echo Done. Press Enter to Reboot.
 read TEMPORARYDONE
