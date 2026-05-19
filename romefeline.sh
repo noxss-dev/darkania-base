@@ -7,7 +7,7 @@ clear
 echo Make sure the clock is syncronized
 timedatectl
 clear
-echo Partition the drive like this (remember)
+echo Partition the drive like this remember
 echo Partition, Size, Type
 echo /dev/sda1, 1G, EFI System
 echo /dev/sda2, 16G, Linux Swap
