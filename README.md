@@ -1,8 +1,15 @@
 # 🐱 Darkania
 *Arch* (*Arch Linux*) for ***cats***. *Yeah*.
 Also added *`gcat.sh`* for **cat** management.
+# ❗ Requirements
+• An USB stick with almost 2 GB to sacrifice (it will erase every data on the stick)
+• Wireless connection (Wi-Fi) or mobile data with Hotspot
+• Pure UEFI, no UEFI+CSM, no CSM
+• Patience, especially in the xfce part 
+• A domestic cat
+• A 2010+ computer
+• A goodbye to windows
 # ⤵️ Installation Process
-**WARNING: This project is still in alpha. Make sure you've got UEFI, not hybrid UEFI+CSM or only CSM. While you can still install it on hybrid UEFI+CSM, the tests are made on pure UEFI. You also need an USB stick.**
 ## 🪟 Windows 10-11
 Grab an usb stick. **Make sure to recover any important data: this procedure will erase all the usb content**.
 Click [here](https://arch.mirror.hyperbit.it/iso/2026.05.01/), you should download the arch image.
