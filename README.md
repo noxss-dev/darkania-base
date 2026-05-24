@@ -1,6 +1,13 @@
 # 🐱 Darkania
 *Arch* (*Arch Linux*) for ***cats***. *Yeah*.
 Also added *`gcat.sh`* for **cat** management.
+```
+     /,\,,,,/\
+    , ⬤   ⬤ ,,
+   ~    —      ~
+   ~@         @
+     @@@@@@@@
+```
 # ❗ Requirements
 • An USB stick with almost 2 GB to sacrifice (it will erase every data on the stick)
 
