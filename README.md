@@ -85,3 +85,21 @@ Now run the installer:
 ```./romefeline.sh```
 
 From now on, the installer should automatize everything. Once finished, you should see darkania.
+# 🔧 Troubleshooting
+You may have problems during the installation process.
+
+If in the reboot you see:
+```No bootable device found```
+Or similiar, it's because you have CSM instead of UEFI.
+
+Darkania only works on UEFI.
+
+You can change from CSM to UEFI in the BIOS.
+
+If you have a Phoenix BIOS, you might see when booting:
+```KEY for setup```
+That setup is actually the BIOS, so spam that key once seen that message, before loading the OS.
+
+If you're not lucky, search for your BIOS key according to your PC. Once entered, go somewhere for switching to CSM. It's usually in Boot -> Boot Mode.
+
+Exit and save. Now your PC should boot Darkania correctly.
