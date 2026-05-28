@@ -1,6 +1,11 @@
 clear
 loadkeys it
 setfont ter-132b
+echo "     /,\\,,,,/\\"
+echo "    , ⬤   ⬤ ,,"
+echo "   ~    ~      ~"
+echo "   ~@         @ "
+echo "     @@@@@@@@   "
 echo "bleeding.darkania installation"
 echo "------------------------------"
 echo Make sure you are connected to internet. Press CTRL+C to exit, press enter to continue.
