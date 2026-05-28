@@ -1,6 +1,7 @@
 # 🐱 Darkania
 *Arch* (*Arch Linux*) for ***cats***. *Yeah*.
 Also added *`gcat.sh`* for **cat** management.
+Darkania is also internally called `bleeding.darkania`
 ```
      /,\,,,,/\
     , ⬤   ⬤ ,,
