@@ -1,12 +1,18 @@
 clear
 loadkeys it
 setfont ter-132b
+echo "bleeding.darkania installation"
+echo "------------------------------"
 echo Make sure you are connected to internet. Press CTRL+C to exit, press enter to continue.
 read TEMPDx
 clear
+echo "bleeding.darkania installation"
+echo "------------------------------"
 echo Make sure the clock is syncronized
 timedatectl
 clear
+echo "bleeding.darkania installation"
+echo "------------------------------"
 echo Partition the drive like this remember
 echo Partition, Size, Type
 echo /dev/sda1, 1G, EFI System
@@ -18,16 +24,33 @@ read YAYSJS
 clear
 cfdisk /dev/sda
 clear
+echo "Partitioning third partition as ext4..."
 mkfs.ext4 /dev/sda3
+clear
+echo "Enabling swap partition (the second one)..."
 mkswap /dev/sda2
+clear
+echo "Partitioning first partition as FAT32..."
 mkfs.fat -F 32 /dev/sda1
+clear
+echo "Preparing chroot..."
 mount /dev/sda3 /mnt
 mount --mkdir /dev/sda1 /mnt/boot
+clear
+echo "Indicating which swap partition to use..."
 swapon /dev/sda2
+clear
+echo "Installing the base system..."
 pacstrap -K /mnt base linux linux-firmware
-genfstab -U /mnt >> /mnt/etc/fstab 
+clear
+echo "Generating fstab..."
+genfstab -U /mnt >> /mnt/etc/fstab
+clear
+echo "[!] From now, executing commands in chroot. CTRL+C to go back, ENTER to enter chroot."
+read JAIDJF
+clear
 arch-chroot /mnt sh -c "ln -sf /usr/share/zoneinfo/Europe/Rome /etc/localtime && hwclock --systohc && locale-gen && echo LANG=it_IT.UTF-8 > /etc/locale.conf && echo KEYMAP=it > /etc/vconsole.conf && echo catstation > /etc/hostname && mkinitcpio -P && pacman -S grub efibootmgr && grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB && grub-mkconfig -o /boot/grub/grub.cfg && passwd && pacman -S wpa_supplicant iwd networkmanager && systemctl enable --now NetworkManager && pacman -S gdm gnome && systemctl enable gdm.service"
 clear
-echo Done. Press Enter to Reboot.
+echo "Remove the installation media and press ENTER. If you want to stay just to edit the installed system, press CTRL+C."
 read TEMPORARYDONE
 reboot
