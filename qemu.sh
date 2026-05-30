@@ -54,7 +54,7 @@ clear
 echo "[!] From now, executing commands in chroot. CTRL+C to go back, ENTER to enter chroot."
 read JAIDJF
 clear
-arch-chroot /mnt sh -c "ln -sf /usr/share/zoneinfo/Europe/Rome /etc/localtime && hwclock --systohc && locale-gen && echo LANG=it_IT.UTF-8 > /etc/locale.conf && echo KEYMAP=it > /etc/vconsole.conf && echo catstation > /etc/hostname && mkinitcpio -P && pacman -S grub efibootmgr && grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB && grub-mkconfig -o /boot/grub/grub.cfg && passwd && pacman -S wpa_supplicant iwd networkmanager && systemctl enable --now NetworkManager && pacman -S gdm gnome && systemctl enable gdm.service"
+arch-chroot /mnt sh -c "ln -sf /usr/share/zoneinfo/Europe/Rome /etc/localtime && hwclock --systohc && locale-gen && echo LANG=it_IT.UTF-8 > /etc/locale.conf && echo KEYMAP=it > /etc/vconsole.conf && echo catstation > /etc/hostname && mkinitcpio -P && pacman -S grub efibootmgr && grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB && grub-mkconfig -o /boot/grub/grub.cfg && passwd && pacman -S wpa_supplicant iwd networkmanager && systemctl enable --now NetworkManager"
 clear
 echo "Done. Hit enter to reboot, CTRL+C to change something in the installed system."
 echo QEMUTEMPORARYDONE
