@@ -9,16 +9,15 @@ Darkania is also internally called `bleeding.darkania`
    ~@         @
      @@@@@@@@
 ```
-The current release is 3.2.
+Current: 3
+
 Darkania1 was pretty buggy and with no CSM support.
 
 Darkania2 fixed bugs & errors but still no CSM.
 
 Darkania3 added a coherent installer, suitable for anyone from consumers to developers, but no CSM support.
 
-Darkania 3.2 added ASCII art, a sort of splash screen but no CSM support.
-
-Darkania3.5 added a new font, but no CSM support.
+After weeks of chaos and broken VMs, Darkania4 should be completely rewritten and with CSM support.
 # ❗ Requirements
 • An USB stick with almost 2 GB to sacrifice (it will erase every data on the stick)
 
