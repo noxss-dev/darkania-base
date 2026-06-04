@@ -53,3 +53,26 @@ clear
 figlet "Generate fstab"
 genfstab -U /mnt >> /mnt/etc/fstab
 clear
+figlet "Chroot Env."
+echo "Enter Chroot Enviroment? Press ENTER to enter, press ^C to exit."
+read enterchrootyesno
+
+arch-chroot /mnt /bin/sh <<EOF
+ln -sf /usr/share/zoneinfo/Europe/Rome /etc/localtime
+hwclock --systohc
+clear
+locale-gen
+clear
+echo "LANG=it_IT.UTF-8" > /etc/locale.conf
+echo "KEYMAP=it" > /etc/vconsole.conf
+echo "cat" > /etc/hostname
+clear
+mkinitcpio -P
+clear
+echo "Set password for root:"
+passwd
+clear
+pacman -S grub efibootmgr
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+EOF
+reboot
