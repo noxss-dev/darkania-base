@@ -1,4 +1,4 @@
-# 🐱 Darkania
+# 🐱 Darkania IV
 *Arch* (*Arch Linux*) for ***cats***. *Yeah*.
 Also added *`gcat.sh`* for **cat** management.
 Darkania is also internally called `bleeding.darkania`
@@ -9,15 +9,11 @@ Darkania is also internally called `bleeding.darkania`
    ~@         @
      @@@@@@@@
 ```
-Current: 3
+Current: 4 Insider / 3
 
-Darkania1 was pretty buggy and with no CSM support.
-
-Darkania2 fixed bugs & errors but still no CSM.
-
-Darkania3 added a coherent installer, suitable for anyone from consumers to developers, but no CSM support.
-
-After weeks of chaos and broken VMs, Darkania4 should be completely rewritten and with CSM support.
+Darkania-Legacy (I-III) was pretty buggy and with no CSM support.
+After weeks of chaos and broken VMs, Darkania IV should be completely rewritten.
+There is
 # ❗ Requirements
 • An USB stick with almost 2 GB to sacrifice (it will erase every data on the stick)
 
