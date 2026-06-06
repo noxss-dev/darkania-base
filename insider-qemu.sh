@@ -3,7 +3,7 @@ clear
 figlet "Keymap Config."
 echo "Select your keymap: "
 read keymap
-loadkeys $(keymap)
+loadkeys "${keymap}"
 if [ $(cat /sys/firmware/efi/fw_platform_size) = "32" ]; do
 echo "[!] It looks like you are in x86 EFI. This is fine for most cases, but if you need to run complex applications i386 or i686 is not recommended or isn't totally supported. An x86 EFI is common on older PCs like ASUS eee PCs."
 else
