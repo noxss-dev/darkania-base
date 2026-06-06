@@ -1,7 +1,6 @@
 pacman -S figlet whiptail
 clear
 figlet "Keymap Config."
-localectl list-keymaps
 echo "Select your keymap: "
 read keymap
 loadkeys $(keymap)
