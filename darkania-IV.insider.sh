@@ -1,16 +1,17 @@
-pacman -S figlet whiptail
+setfont ter-132b
 clear
-figlet "Keymap Config."
+echo "[!] Keymap Config."
+echo "-----------------------"
 echo "Select your keymap: "
 read keymap
-loadkeys $(keymap)
+loadkeys "${keymap}"
 if [ $(cat /sys/firmware/efi/fw_platform_size) = "32" ]; do
 echo "[!] It looks like you are in x86 EFI. This is fine for most cases, but if you need to run complex applications i386 or i686 is not recommended or isn't totally supported. An x86 EFI is common on older PCs like ASUS eee PCs."
 else
 echo "[✓] You are in a x64 EFI, which means everything is supported (by today's standards)."
 fi
 clear
-figlet "Network Config."
+echo "Network Config."
 echo "** ETHERNET"
 ip link
 echo "** Wi-Fi"
@@ -20,16 +21,18 @@ iwctl station wlan0 get-networks
 read toconnect
 iwctl station wlan0 connect "${toconnect}"
 clear
-figlet "Verify(10)"
+echo "Verify(10)"
+echo "--------------------------"
 ping -c 10 ping.archlinux.org
 timedatectl
 clear
-figlet "Partitioning"
+echo "Partitioning"
+echo "--------------------"
 echo "Select the drive to be partitioned."
 lsblk
 read drive
 clear
-figlet "Partitioning"
+echo "Partitioning"
 echo "______________________________________________________________"
 echo "| /dev/DISK1 | EFI system        |	1G                       |"
 echo "| /dev/DISK2 | Linux swap	       |  16G                      |"
