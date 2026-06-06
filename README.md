@@ -9,7 +9,7 @@ Darkania is also internally called `bleeding.darkania`
    ~@         @
      @@@@@@@@
 ```
-Current: 4 Insider / 3
+Current: 4 Insider / Legacy
 
 Darkania-Legacy (I-III) was pretty buggy and with no CSM support.
 After weeks of chaos and broken VMs, Darkania IV should be completely rewritten.
