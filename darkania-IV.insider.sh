@@ -26,26 +26,31 @@ ping -c 10 ping.archlinux.org
 timedatectl
 clear
 figlet "Partitioning"
-echo "___________________________________________________________"
-echo "| /dev/sda1 | EFI system       |	1G                       |"
-echo "| /dev/sda2 | Linux swap	     |  16G                      |"
-echo "| /dev/sda3 |	Linux Filesystem |  Remainder of the device  |"
-echo "````````````````````````````````````````````````````````````"
+echo "Select the drive to be partitioned."
+lsblk
+read drive
+clear
+figlet "Partitioning"
+echo "______________________________________________________________"
+echo "| /dev/DISK1 | EFI system        |	1G                       |"
+echo "| /dev/DISK2 | Linux swap	       |  16G                      |"
+echo "| /dev/DISK3 | Linux Filesystem |  Remainder of the device   |"
+echo "``````````````````````````````````````````````````````````````"
 echo "Remember this partitioning scheme. You'll hop on the partitioning tool when pressed ENTER."
 read entrypress
 clear
-cfdisk
+cfdisk "${drive}"
 clear
 figlet "Formatting"
 echo "Making partitions usable..."
-mkfs.ext4 /dev/sda3
-mkswap /dev/sda2
-mkfs.vfat -F 32 /dev/sda1
+mkfs.ext4 "${drive}3"
+mkswap "${drive}2"
+mkfs.vfat -F 32 "${drive}1"
 clear
 figlet "Preparing"
-mount /dev/sda3 /mnt
-mount --mkdir /dev/sda1 /mnt/boot
-swapon /dev/sda2
+mount "${drive}3" /mnt
+mount --mkdir "${drive}1" /mnt/boot
+swapon "${drive}2"
 clear
 figlet "Install base system"
 pacstrap -K /mnt base linux linux-firmware
