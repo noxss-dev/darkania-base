@@ -1,5 +1,10 @@
 setfont ter-132b
 clear
+echo "     /,\\,,,,/\\"
+echo "    , ⬤   ⬤ ,,"
+echo "   ~    —      ~"
+echo "   ~@         @"
+echo "     @@@@@@@@"
 echo "[!] Keymap Config."
 echo "-----------------------"
 echo "Select your keymap: "
