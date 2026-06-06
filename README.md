@@ -30,6 +30,7 @@ There is
 • A goodbye to windows
 # ⤵️ Installation Process
 ## 🪟 Windows 10-11
+**NOTE: This installation process isn't valid anymore. We are replacing with a new installation process soon, when Darkania IV insider becomes Darkania IV Current.**
 Grab an usb stick. **Make sure to recover any important data: this procedure will erase all the usb content**.
 
 Click [here](https://arch.mirror.hyperbit.it/iso/2026.05.01/), you should download the arch image.
