@@ -1,3 +1,3 @@
 {
-  "mozillaFirefox": ["https://github.com/noxss-dev/darkania-base/raw/refs/heads/main/bin/firefox-1.5.0.6.tar.zip", "firefox-1.5.0.6.tar.zip"]
+  "mozillaFirefox": ["https://ftp.mozilla.org/pub/firefox/releases/150.0/linux-x86_64/en-US/firefox-150.0.tar.xz", "firefox-150.0.tar.xz", true]
 }
