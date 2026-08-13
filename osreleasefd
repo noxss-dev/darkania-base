@@ -1,0 +1,17 @@
+NAME=Dragony
+ID=dragony
+ID_LIKE=arch
+PRETTY_NAME=Darkania
+FANCY_NAME=Dragon.y
+VARIANT="Desktop"
+VARIANT_ID=graphical
+VERSION=GhostBuster
+VERSION_ID=1
+VERSION_CODENAME=firstghost
+IMAGE-ID=cat-with-arch
+IMAGE-VERSION=1
+RELEASE-TYPE="experiment"
+SUPPORT_END="2027-12-03"
+LOGO=dragon-logo
+VENDOR_NAME=nuggetqq0
+EXPERIMENT="Still tested in a rough way, but still tested."
